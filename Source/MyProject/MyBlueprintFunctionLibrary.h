@@ -14,8 +14,7 @@ class MYPROJECT_API UMyBlueprintFunctionLibrary : public UBlueprintFunctionLibra
 {
 	GENERATED_BODY()
 
-
 		UFUNCTION(BLueprintCallable, Category = "MyCategory")
-		static FString PrintKATData(float Speed, FVector TargetPos);
+		static FString PrintKATData(float Speed, float Yaw, FVector TargetPos);
 	
 };

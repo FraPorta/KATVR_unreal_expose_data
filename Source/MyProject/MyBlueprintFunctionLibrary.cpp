@@ -2,8 +2,8 @@
 
 #include "MyBlueprintFunctionLibrary.h"
 
-FString UMyBlueprintFunctionLibrary::PrintKATData(float Speed, FVector TargetPos)
+FString UMyBlueprintFunctionLibrary::PrintKATData(float Speed, float Yaw, FVector TargetPos)
 {
-	FString TargetString = (FString::Printf(TEXT("The current speed is %f\nThe target position is: "), Speed)) + TargetPos.ToString();
+	FString TargetString = (FString::Printf(TEXT("The current speed is %f\nThe current Yaw is: %f \nThe target position is: "), Speed, Yaw)) + TargetPos.ToString();
 	return TargetString;
 }
