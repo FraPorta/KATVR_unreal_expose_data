@@ -86,7 +86,7 @@ void KatDataCore::KatGetFrame(int32 count)
 
 	if (katGetData != NULL)
 	{
-		//UE_LOG(LogTemp, Warning, TEXT("Update..."));
+		UE_LOG(LogTemp, Warning, TEXT("Update..."));
 		bool temprout = katGetData(count, bodyYaw1, walkPower1, moveDirection1, isMoving1, distancer1);
 		if (temprout)
 		{
