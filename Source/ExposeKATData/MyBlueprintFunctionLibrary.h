@@ -15,7 +15,7 @@ class EXPOSEKATDATA_API UMyBlueprintFunctionLibrary : public UBlueprintFunctionL
 	GENERATED_BODY()
 	
 		UFUNCTION(BLueprintCallable, Category = "MyCategory")
-		static FString ExposeKATData(float Yaw, float WalkPower , FVector TargetPos);
+		static FString ExposeKATData(float Yaw, float WalkPower , FVector TargetPos, int Direction);
 	
 		//UFUNCTION(BLueprintCallable, Category = "MyCategory")
 		//static FString ExposeExtraKATData(int MoveDirection, bool IsMoving, float WalkDistance);

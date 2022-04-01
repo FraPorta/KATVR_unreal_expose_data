@@ -2,13 +2,15 @@
 
 #include "MyBlueprintFunctionLibrary.h"
 
-FString UMyBlueprintFunctionLibrary::ExposeKATData(float Yaw, float WalkPower, FVector TargetPos)
+FString UMyBlueprintFunctionLibrary::ExposeKATData(float Yaw, float WalkPower, FVector TargetPos, int Direction)
 {
+	FString DirectionStr = FString();
 
 	FString PosStr = TargetPos.ToCompactString();
-	FString YawStr = FString::Printf(TEXT(" %f"), Yaw);
-	FString WalkPowerStr = FString::Printf(TEXT(" %f"), WalkPower);
+	FString YawStr = FString::Printf(TEXT("Yaw: %f\n"), Yaw);
+	FString WalkPowerStr = FString::Printf(TEXT("WalkPower: %f\n"), WalkPower);
+	
+	DirectionStr = FString::Printf(TEXT("%i\n"), Direction);
 
-
-	return PosStr + YawStr + WalkPowerStr;
+	return DirectionStr + YawStr + WalkPowerStr + PosStr ;
 }
